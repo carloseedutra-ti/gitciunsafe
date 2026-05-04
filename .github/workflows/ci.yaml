@@ -26,3 +26,7 @@ jobs:
           pip install bandit
           bandit -r . -ll
 
+      - name: SCA - dependency scan
+        run: |
+          pip install pip-audit
+          pip-audit -r requirements.txt
