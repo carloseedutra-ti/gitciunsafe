@@ -1,2 +1,4 @@
 # settings.py
-API_KEY = "sk_test_123456789"
+import os
+
+API_KEY = os.getenv("API_KEY")
