@@ -20,4 +20,9 @@ jobs:
 
       - name: Run tests
         run: pytest
+        
+      - name: SAST - Bandit
+        run: |
+          pip install bandit
+          bandit -r . -ll
 
